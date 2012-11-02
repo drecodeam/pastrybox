@@ -39,7 +39,7 @@
                         <a href="https://twitter.com/thepastrybox" class="ss-twitter" title="Follow @thepastrybox"><span class="visuallyhidden">Follow @thepastrybox</span></a>
                     </li>
                     <li class="tooltipify">
-                        <a href="http://alexduloz.github.com/thepastrybox" class="ss-octocat" title="Fork The Pastry Box"><span class="visuallyhidden">Fork The Pastry Box</span></a>
+                        <a href="https://github.com/alexduloz/pastrybox" class="ss-octocat" title="Fork The Pastry Box"><span class="visuallyhidden">Fork The Pastry Box</span></a>
                     </li>
                     <li class="tooltipify">
                         <a href="<?php bloginfo('rss2_url'); ?>" class="ss-rss" title="The Flux"><span class="visuallyhidden">The Flux</span></a>
