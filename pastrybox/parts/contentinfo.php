@@ -4,7 +4,7 @@
 
         <div class="additional">
             <h2 class="h-gamma">Fork & Improve</h2>
-            <p>The template used for the Pastry Box Project <a href="http://alexduloz.github.com/pastrybox/" title="Fork On Github">can be forked on Github</a>. Feel free to add features to the project. Simply check the <a href="http://alexduloz.github.com/pastrybox/#guidelines" title="Forking Guidelines">forking guidelines</a> before sending pull requests.</p>
+            <p>The template used for the Pastry Box Project <a href="https://github.com/alexduloz/pastrybox" title="Fork On Github">can be forked on Github</a>. Feel free to add features to the project.</p>
         </div>
           	
         <div class="additional">
