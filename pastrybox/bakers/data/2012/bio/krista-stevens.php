@@ -1,0 +1,2 @@
+<p>Krista is the Editor-in-Chief of <a href="http://www.alistapart.com/">A List Apart</a> and the co-founder of <a href="http://contentsmagazine.com/">Contents</a>, a magazine focusing on content strategy and online publishing. She is a merry <a href="http://automattic.com/">Automattician</a>. Krista happily describes herself as a hopeless introvert. She lives in Winnipeg, Canada.</p>
+<p>You can read <a href="http://kristastevens.com/">her blog</a> and follow her on Twitter <a href="http://twitter.com/#!/kristastevens">@kristastevens</a>.</p>

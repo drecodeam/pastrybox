@@ -1,0 +1,1038 @@
+
+// Refactor:
+//     -reduce specifity
+//     -abstract & reduce rules
+//     -fix some poor naming choices
+//     -rely more on less capabilities
+
+
+/*
+==========================================================================
+@mixins
+==========================================================================
+*/
+
+.transition(@args) {
+    -webkit-transition: @args;
+    -moz-transition: @args;
+    -o-transition: @args;
+    transition: @args;
+}
+
+.box-shadow(@args) {
+    -webkit-box-shadow: @args;
+    -moz-box-shadow: @args;
+    box-shadow: @args;
+}
+
+
+/*
+==========================================================================
+html, body
+==========================================================================
+*/
+
+
+body {
+    padding-top: 60px;
+    font-family: "adobe-garamond-pro", serif;
+    font-size: 1.8em;
+    line-height: 1.8;
+}
+
+
+/*
+==========================================================================
+Links
+==========================================================================
+*/
+
+
+a {
+    position: relative;
+    color: #e13300;
+    text-decoration: none;
+    border-bottom: 1px dotted transparent;
+    .transition(all .2s);
+    
+    &:hover {
+        color: #e13300;
+        border-bottom: 1px dotted #e13300;
+        text-decoration: none;
+    }
+    
+    &:active, &:focus {
+        top: 1px;
+    }
+}
+
+// mainy used for .thought-content
+.a-area-a {
+    a {
+        font-style: italic;
+    }
+}
+
+// mainy used for bakers in .thought-format-b 
+// also for .jump
+.a-area-b {
+    a {
+        color: #777;
+        font-style: normal;
+        
+        &:hover {
+            color: #f70;
+            border-bottom: 1px dotted transparent;
+        }
+    }
+}
+
+// mainly used for .brand
+.a-area-c {
+        a {
+        color: #333;
+
+        &:hover {
+            color: #333;
+            border-bottom: 1px dotted transparent;
+        }
+    }
+}
+
+
+// mainly used for .contentinfo (inverted colors)
+.a-area-d {
+        a {
+        color: #777;
+
+        &:hover {
+            color: white;
+            border-bottom: 1px dotted white;
+        }
+    }
+}
+
+
+.additional:hover {
+    a {
+        border-bottom: 1px dotted #ccc; 
+    }
+}
+
+.a-no-underline {
+    border-bottom: 1px dotted transparent;
+    
+    &:hover {
+        border-bottom: 1px dotted transparent;
+    }
+}
+
+.a-area-no-underline {
+    a {
+        .a-no-underline
+    }
+}
+
+/*
+==========================================================================
+Selection
+==========================================================================
+*/
+
+
+::-moz-selection {
+    background: pink;
+    text-shadow: none;
+    color: #333 !important;
+}
+
+::selection {
+    background: pink;
+    text-shadow: none;
+    color: #333 !important;
+}
+
+
+/*
+==========================================================================
+General
+==========================================================================
+*/
+
+// *************** TAGS *************** //
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    line-height: 1.6;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+blockquote {
+    border-left: none;
+    margin: 0;
+    padding: 0;
+    
+    blockquote {
+        font-style: italic;
+        font-size: .9em !important;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 1em;
+        border-left: 4px double #ccc;
+    }
+}
+
+cite {
+    font-style: italic;
+    }
+
+abbr, acronym {
+  border-bottom: 1px dotted #777;
+  cursor: help;
+}
+
+// *************** HELPERS *************** //
+
+.portrait, .portrait-small {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.portrait {
+    max-width: 200px;
+}
+
+.portrait-small {
+    max-width: 100px;
+}
+
+
+/*
+==========================================================================
+Wrappers (box-shadow effect)
+==========================================================================
+*/
+
+
+.front .main, 
+.coming-next, 
+.baker-profile, 
+.baker-past-thoughts, 
+.by-years, 
+.by-months {
+    padding-bottom: 1.5em;
+    .box-shadow(0 10px 4px -4px #ddd);
+}
+
+
+
+/*
+==========================================================================
+h(n)
+==========================================================================
+*/
+
+// Reset Bootstrap
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: normal;
+}
+
+.h-alpha {
+    text-align: center;
+    text-transform: uppercase;
+    border-top: 1px dotted #333;
+    border-bottom: 1px dotted #333;
+    padding: 1em 0;
+    font-size: .9em;
+    margin-bottom: 2em;
+}
+
+.h-beta {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    
+    span {
+        border-bottom: 1px dotted #333;
+    }
+}
+
+.h-gamma {
+        border-bottom: 2px dotted white;
+        margin-bottom: .3em;
+        font-size: 1.3em;
+}
+
+/*
+==========================================================================
+Hash navigation
+==========================================================================
+*/
+
+.jump {
+    font-style: italic !important;
+    text-transform: lowercase;
+    font-size: .8em;
+}
+
+.stream, .search-results {
+    .jump {
+        padding: 1em 0;
+    }
+}
+
+
+/*
+==========================================================================
+Tooltip (Bootstrap)
+==========================================================================
+*/
+
+
+.tooltip {
+    font-size:.6em;
+    font-style: italic;
+    
+    .tooltip-inner   {
+        background: #333;
+        padding: 1em;
+    }
+    
+    &.right .tooltip-arrow {
+        border-right-color: #333;
+    }
+}
+    
+    
+/*
+==========================================================================
+Icons
+==========================================================================
+*/
+    
+.pastrysearch {
+    font-family: 'HeydingsCommonIconsRegular', Arial, sans-serif;
+    position: relative;
+    left: -7px;
+    
+    &:before {
+        content: "M";
+    }
+}
+    
+.pastrybox {
+    font-family: "cooper-black-std",sans-serif !important;
+    text-transform: uppercase !important;
+    font-style: normal !important;    
+    
+    &:before {
+        content: "P";
+    }        
+}
+
+.pastrybox.logo {
+    font-size: 20em;
+    text-align: center;
+}
+
+.pastryseparator {
+    &:before {
+        font-family: 'NymphetteRegular';
+        display: block;
+        text-align: center;
+        //content: "qwertzuiop asdfghjkl yxcvbnm";
+        content: "ij";
+        font-size: 3em;
+    }
+}
+    
+
+
+
+
+/*
+==========================================================================
+parts/navbar.php (Often Overrides Bootstrap)
+==========================================================================
+*/
+
+
+.navbar {
+
+    font-size: .6em;
+    font-family: "myriad-pro",sans-serif;
+    
+    .btn-navbar {
+        margin-bottom: .5em;
+    }
+    
+    .navbar-inner {
+        min-height: 30px;
+    }
+    
+    form {
+        text-align: right;
+        position: relative;
+        top: -2px;
+    }
+    
+    [class^="ss-"] {
+        position: relative;
+        top: 3px;
+    } 
+}
+
+.navbar-inverse .navbar-inner {
+    background-color: #333;
+    background-image: linear-gradient(to bottom, #444, #333);
+    background-repeat: repeat-x;
+    border-color: #222;
+}
+
+.search-container {
+    float: right;
+    
+    input {
+        background: #ccc;
+        .transition(all .3s);
+        
+        &:focus {
+            background: white;
+        }
+    }
+}
+
+.mainnav {
+    float: left
+}
+
+.navbar .nav {
+    margin: 0;
+}
+
+.navbar .nav > li > a {
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+
+/*
+==========================================================================
+parts/banner.php
+==========================================================================
+*/
+
+
+.banner {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: .6em;
+}
+
+.brand {
+    text-transform: lowercase;
+    font-style: italic;
+    letter-spacing: 1px;
+    font-size: 1.2em;
+    margin-top: 1.3em;
+}
+
+
+
+/*
+==========================================================================
+parts/main.php
+==========================================================================
+*/
+
+
+.main {
+    margin-top: 2em;
+}
+
+
+
+// *************** Thoughts *************** //
+
+/**
+* parts/main/baker.php
+* parts/main/search-results.php
+* parts/main/single-thought.php
+* parts/main/stream.php
+*/
+
+// General
+
+.content-nav {
+    text-transform: uppercase;
+}
+
+.next, .previous {
+    font-size: .55em;   
+}
+
+.next {
+    float: right;
+}
+
+.previous {
+    float: left;
+}
+
+.baked-by {
+    padding: .4em 0;
+    text-align: center;
+    font-size: .8em;
+} 
+     
+.baker-portrait {
+    text-align: center;
+}
+
+.thought-title {
+    text-transform: uppercase;
+    font-size: .7em;
+}
+
+
+// Specific: One column format
+
+.thought-format-a {
+    
+    .baked-by {
+        padding: 0;
+        text-align: center;
+        font-size: .9em;
+        line-height: 1.4;
+        margin-bottom: .5em;
+        
+        span {
+            display: block;
+        }
+    }
+
+    .thought-title {
+        padding-top: 1em;
+        border-top: 1px dotted #333;
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    .thought-content {
+        margin-top: 1em;
+        padding-top: .6em;
+        border-top: 1px dotted #333;
+        
+        p, ul, ol, pre, blockquote {
+            font-size: 1em;
+            line-height: 1.6;
+            margin-bottom: 1.2em;
+            
+        }
+    }
+    
+    .thought-footer {
+        text-align: center;
+        margin-top: 1em;
+        padding-top: 1em;
+        border-top: 1px dotted #333;
+        font-size: .7em;
+        color: #777;
+        font-style: italic;
+    }
+}
+
+// Specific: Two columns format
+
+.thought-format-b {
+    border-bottom: 1px dotted #333;
+    padding-bottom: 1.5em;
+     
+    .thought-title {
+        margin-top: 2em;
+        margin-bottom: .5em;
+        text-align: right;
+    }
+    
+    .thought-content {
+        
+        p, ul, ol, pre, blockquote {
+            font-size: .8em;
+            line-height: 1.4;
+            margin-bottom: 1em;
+        }
+    }
+}
+
+// *************** Bakers *************** //
+
+/**
+ * parts/main/bakers.php
+ * parts/main/archives.php
+ */
+
+
+.bakers-2012 {
+    
+    .the-baker:last-of-type {
+        display: block;
+        width: 100%;
+        text-align: center;
+            
+        > * {
+            position: relative;
+            right: 20px;
+        }
+    }
+}
+
+// *************** Profile *************** //
+
+/**
+ * parts/main/baker.php
+ */
+
+.baker-profile {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    
+    .baker-portrait {
+        text-align: left;
+        margin-top: .2em;
+    }
+    
+    p {
+        font-size: .8em;
+        line-height: 1.4;
+        margin-bottom: 1em;
+    }
+}
+
+.baker-past-thoughts {
+    margin-top: 3em;
+    
+    .thought {
+        margin-top: 2em;
+    }
+    
+    .thought-title {
+        border-top: none;
+    }
+}
+
+.baker-future-thoughts {
+    margin-top: 3em;
+    
+    ul {
+        margin-top: 2em;
+    }
+    
+    li {
+        text-align: center;
+        font-style: italic;
+    }  
+}
+
+
+// *************** Archives *************** //
+
+/**
+* parts/main/archives.php
+*/
+
+
+.by-years, .by-months {
+    margin-bottom: 1.5em;
+    
+    ul {
+        font-size: .7em;
+        text-transform: uppercase;
+    }
+}
+
+/**
+ * parts/main/archives.php
+ * parts/main/bakers.php
+ */
+
+.the-baker {
+    min-height: 7em;
+    text-align: center;
+}
+
+
+
+// *************** Not Found *************** //
+
+/**
+ * parts/main/not-found.php
+ */
+
+.not-found {
+    fieldset {
+        padding-top: 1em;
+    }
+
+    input[type="text"] {
+        font-size: 2em !important;
+        min-height: 2em;
+        width: 100%;
+    }
+
+    form {
+        text-align: center;
+    }
+
+    .pastrysearch {
+        font-size: 1em;
+    }
+
+    .search-query {
+        padding-right: 2em !important;
+    }
+
+    .search-btn {
+        left: .5em;
+        top: .1em;
+    }
+}
+
+
+/*
+==========================================================================
+parts/complementary.php
+==========================================================================
+*/
+
+
+// *************** Recent Thoughts *************** //
+
+/**
+ * parts/complementary/
+ * parts/recent-thoughts.php
+ */
+
+
+.complementary {
+    padding-top: 1.5em;
+}
+
+.complementary {
+    .thought {
+        border-bottom: 1px dotted #ccc;
+        margin-bottom: 1em;
+        padding-bottom: .8em;
+    }
+}
+
+// *************** Recent Thoughts *************** //
+
+/**
+ * parts/complementary/coming-next.php
+ */
+
+.recent-thoughts {
+    margin-bottom: 2em;
+    padding-bottom: 1em;
+}
+
+// *************** Coming Next *************** //
+
+/**
+ * parts/complementary/coming-next.php
+ */
+
+.coming-next {
+    padding-bottom: 1em;
+    margin-bottom: 1em;
+    text-align: center;
+    
+    li {
+        min-height: 9em;
+    }
+}
+
+.coming-next-date {
+    text-transform: uppercase;
+    font-size: .6em;
+}
+
+
+/*
+==========================================================================
+parts/contentinfo.php
+==========================================================================
+*/
+
+
+.contentinfo {
+    margin-top: 2em;
+    padding-top: 1em;
+    background: #333;
+    color: #ddd;
+}
+
+.contentinfo {
+    font-family: "myriad-pro",sans-serif;
+    font-size: .8em;
+    
+    .additional {
+        margin-bottom: 1.6em;
+    }
+    
+    ul {
+        margin: 1em 0 0 0;
+        padding: 0;
+    }
+    
+    li {
+        padding: .5em 0;
+        display: inline;
+    }
+    
+}
+
+.disclaimers-navigation {
+    border-top: 4px double white;
+    text-align: center;
+    
+    li {
+        display: inline;
+        padding: 0 1em;
+    }
+}
+
+.copyright {
+    text-transform: uppercase;
+    font-size: .7em;
+    text-align: center;
+    margin: 1em 0;
+    padding: 1em 0 2em 0; 
+}
+
+.burn {
+    text-align: center;
+    padding: .5em 0;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    font-size: .6em;
+    border-top: 1px dotted white;
+}
+
+
+/*
+==========================================================================
+Forms
+==========================================================================
+*/
+
+form {
+    padding: 0;
+    margin: 0;
+    display: inline;
+}
+
+.search-btn {
+    position: relative;
+    left: -34px;
+    border: none;
+    background: transparent;
+}
+
+fieldset {
+    position: relative;
+    right: -34px;
+}
+
+.search-query {
+    padding: 1px 30px 1px 12px !important;
+}
+
+
+/*
+==========================================================================
+Backward Compatibility (older layout / in-post styling)
+==========================================================================
+*/
+
+
+
+blockquote {
+    
+    &.full-width {
+        width: 100%;
+    }
+    
+    &.smaller-text {
+        font-size: .9em;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    .thought-title {
+        font-weight: bold;
+        text-transform: none !important;
+        border-top: none !important;
+    }
+
+    .list-numbers {
+        list-style-type: decimal !important;
+    }
+
+    .list-letters {
+        list-style-type: lower-latin !important;
+    }
+
+    .list-margin > li {
+        margin-bottom: .5em !important;
+    }
+
+    .list-margin > li:not(:last-of-type) {
+        margin-bottom: .5em !important;
+    }
+
+    .margin-top {
+        margin-top: 1em;
+    }
+
+    .margin-bottom {
+        margin-bottom: .5em;
+    }
+}
+
+
+    
+    
+
+/*
+==========================================================================
+Utility
+==========================================================================
+*/
+
+
+.center {
+    text-align: center;
+}
+
+
+
+/*
+==========================================================================
+@media
+==========================================================================
+*/
+
+
+@media (max-width: 979px) {
+
+    body {
+        padding-top: 0 !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-bottom: 0 !important;
+    }
+
+    .navbar-fixed-top,
+    .navbar-fixed-bottom,
+    .navbar-static-top {
+        margin-left: 0;
+        margin-right: 0;
+    }   
+  
+    .mainnav {
+        float: none;
+        display: block;
+    }
+
+    .navbar {
+        text-align: center;
+    } 
+        
+    .search-container {
+        float: none;
+        display: block;
+    
+        fieldset {
+            text-align: center;
+            position: relative;
+            right: -17px;
+        }
+    }
+   
+    .baker-profile {
+        .baker-portrait {
+            text-align: center;
+            margin-bottom: 1em;
+        }
+    }
+
+ 
+}
+
+@media (max-width: 767px) {
+    
+    .disclaimers-navigation {
+        li {
+            display: block;
+            font-size: .9em;
+        }
+    }
+    
+    .thought-format-b {   
+        .thought-title {
+            text-align: center;
+        }
+        
+        .baker-portrait {
+            margin-bottom: 1em;
+        }
+    }
+
+    .container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    blockquote, .additional p {
+        text-align: left;
+    }
+    
+    .the-baker {
+        width: 50%;
+        float: left;
+    }
+    
+    .coming-next li {
+        width: 50%;
+        float: left;
+    }
+    
+    .banner span {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    
+}

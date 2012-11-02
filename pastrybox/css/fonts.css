@@ -1,0 +1,32 @@
+/*
+==========================================================================
+@font-face
+==========================================================================
+*/
+	
+@font-face {
+    font-family: 'HeydingsCommonIconsRegular';
+    src: url("../fonts/HeydingsCommonIconsRegular/heydings_icons-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+/*
+// Currently not used
+@font-face {
+    font-family: 'KalocsaiFlowersRegular';
+    src: url("../fonts/KalocsaiFlowersRegular/Kalocsai_Flowers-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+}
+*/
+
+@font-face {
+    font-family: 'NymphetteRegular';
+    src: url("../fonts/NymphetteRegular/Nymphette-webfont.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+
+}

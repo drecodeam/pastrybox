@@ -1,0 +1,2 @@
+<p>Richard Clark is a front-end designer based in Manchester, UK. He is well-known for running <a href="http://html5doctor.com/">html5doctor</a> and <a href="http://html5gallery.com/">html5gallery</a>, two projects promoting, and embracing, HTML5 mark-up. Richard is Head of Interactive at KMP Digitata and, his day being more than 24 hours long, also co-organizes <a href="http://speaktheweb.org/">the Speak the Web conferences</a>.</p>
+<p>Richard tweets <a href="http://twitter.com/#!/rich_clark">@Rich_Clark</a>.</p>
