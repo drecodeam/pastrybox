@@ -1,5 +1,5 @@
 <?php require_once '__config.php'; ?>
-<?php require_once 'static/maintenance.php'; ?>
+<?php //require_once 'static/maintenance.php'; ?>
 <?php require_once 'parts/head.php'; ?>
 
 <body id="top"<?php if( is_front_page() ): ?> class="front"<?php endif; ?>>

@@ -38,6 +38,8 @@ body {
     font-family: "adobe-garamond-pro", serif;
     font-size: 1.8em;
     line-height: 1.8;
+	overflow-y: auto;
+    overflow-x: hidden;
 }
 
 
@@ -1033,6 +1035,29 @@ Utility
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 490px) {
+   
+   	body, html {
+	    max-width: 460px;
+	    width: 100%;
+    }
     
+    .brand {
+        font-size: .9em;
+    }
+    
+    .thought-format-a {
+        .thought-content {
+            font-size: .9em;
+        }	
+    }
+    
+    .coming-next-date {
+        font-size: .6em;
+        line-height: 1.2;	
+    }
+    
+    .baked-by {
+        font-size: .75em;	
+    }	 
 }
