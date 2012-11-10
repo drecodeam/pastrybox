@@ -20,17 +20,17 @@
                 </div><!-- /.pull-right -->
                 <h2 class="visuallyhidden">Links</h2>
                 <ul class="nav mainnav a-area-no-underline">
-                    <li>
-                        <a href="<?php bloginfo( 'url' ); ?>/about">About</a>
+                    <li class="tooltipify">
+                        <a href="<?php bloginfo( 'url' ); ?>/most-recent" title="And No Extra Bytes">Most Recent</a>
                     </li>
-                    <li>
-                        <a href="<?php bloginfo( 'url' ); ?>/bakers">Bakers</a>
+                    <li class="tooltipify">
+                        <a href="<?php bloginfo( 'url' ); ?>/bakers" title="Contributors To The Project">Bakers</a>
                     </li>
-                    <li>
-                        <a href="<?php bloginfo( 'url' ); ?>/stream">Stream</a>
+                    <li class="tooltipify">
+                        <a href="<?php bloginfo( 'url' ); ?>/stream" title="Everything At Once">Stream</a>
                     </li>
-                    <li>
-                        <a href="<?php bloginfo( 'url' ); ?>/archives">Archives</a>
+                    <li class="tooltipify">
+                        <a href="<?php bloginfo( 'url' ); ?>/archives" title="Time Travel">Archives</a>
                     </li>
                     <li class="tooltipify">
                         <a href="<?php bloginfo( 'url' ); ?>" class="pastrybox" title="Home"><span class="visuallyhidden">Home</span></a>

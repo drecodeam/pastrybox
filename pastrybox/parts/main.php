@@ -8,6 +8,10 @@
     if( is_page('archives') ) {
         require_once('parts/main/archives.php');
     }
+    
+    if( is_page('most-recent') ) {
+        require_once('parts/main/most-recent.php');
+    }
 
     if( ( ( is_search() and have_posts() ) or is_archive() ) and !is_category() ) {
         require_once('parts/main/search-results.php');

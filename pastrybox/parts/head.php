@@ -32,6 +32,9 @@
         $less = new lessc; 
         echo $less->compileFile( dirname(__FILE__) . "/../less/main.less");
         ?>
+        pre {
+            background: url("<?php bloginfo( 'template_url' ); ?>/img/bg-pre.png") repeat center top;
+        }
         </style>
         <!--<script src="<?php bloginfo( 'template_url' ); ?>/backstage/js/modernizr.min.js"></script>-->
         <!--<script src="<?php bloginfo( 'template_url' ); ?>/backstage/js/prefixfree.min.js"></script>-->

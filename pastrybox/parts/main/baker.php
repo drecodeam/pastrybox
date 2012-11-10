@@ -33,7 +33,7 @@ $n = count( $publishedThoughts );
         <?php foreach( $publishedThoughts as $theThought ) : ?>
         <div class="thought thought-format-a">
             <h4 class="thought-title">
-                <a href="<?php pastry_the_thought_permalink( $theBaker->name, $theThought ); ?>"><?php pastry_the_thought_title_to_date( $theThought->post_title ); ?></a>
+                <a href="<?php pastry_the_baker_thought_permalink( $theBaker->slug, $theThought ); ?>"><?php pastry_the_thought_title_to_date( $theThought->post_title ); ?></a>
             </h4>
             <blockquote class="thought-content a-area-a">
                 <?php echo pastry_clean_code( $theThought->post_content ); ?>
@@ -55,11 +55,11 @@ $n = count( $futureThoughts );
 
 <?php if($n >= 1): ?>
 <div class="baker-future-thoughts container">
-    <?php if($n == 1): ?>
+    <?php if ( $n == 1 ): ?>
     <h3 class="h-beta"><span>One more thought by <?php echo $theBaker->name; ?> will be published</span></h3>	
     <?php endif; ?>
 		
-    <?php if($n > 1): ?>
+    <?php if ( $n > 1 ): ?>
     <h3 class="h-beta"><span>Here are the dates of <?php echo $theBaker->name; ?>'s future thoughts</span></h3>
     <?php endif; ?>
 

@@ -3,7 +3,7 @@
 	
 	<ul class="row">
 	    <?php foreach ( $bakers->get_years() as $year ): ?>
-        <li class="span12">
+        <li class="span12 no-margin">
             <h3 class="h-beta"><span><?php echo($year); ?></span></h3>
         </li>        
         <li class="bakers-<?php echo( $year ); ?>">

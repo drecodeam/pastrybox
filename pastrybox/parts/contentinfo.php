@@ -24,7 +24,7 @@
         	
         <div class="additional">
             <h2 class="h-gamma">Stay Tuned</h2>
-            <p>You can follow <a href="https://twitter.com/thepastrybox" title="Twitter - Pastry Box">@thepastrybox</a> on Twitter. For direct inquiries, get in touch with <a href="https://twitter.com/alexduloz" title="Twitter - Alex Duloz">@alexduloz</a> or <a href="https://twitter.com/_KatyWatkins" title="Twitter - Katy Watkins">@_KatyWatkins</a>. Alternatively, you can send an email to "hi", followed by the project’s Internet address.</p>
+            <p>You can follow <a href="https://twitter.com/thepastrybox" title="Twitter - Pastry Box">@thepastrybox</a> on Twitter. For direct inquiries, get in touch with <a href="https://twitter.com/alexduloz" title="Twitter - Alex Duloz">@alexduloz</a> or <a href="https://twitter.com/_KatyWatkins" title="Twitter - Katy Watkins">@_KatyWatkins</a>. Alternatively, you can send an email to "hello", followed by the project’s Internet address.</p>
         </div>
         
         <div class="disclaimers">

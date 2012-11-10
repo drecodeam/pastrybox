@@ -1,4 +1,4 @@
-<?php if ( is_single() ): ?>
+<?php if ( is_front_page() || is_single() ): ?>
 <div class="content-nav a-area-b clearfix">
     
     <?php $previousThought = get_previous_post();

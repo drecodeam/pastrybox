@@ -18,7 +18,7 @@ set_include_path( implode( PATH_SEPARATOR, array(
 // Minify (see functions.php)
 // Comment out if you don't want 
 // to minify your markup.
-//ob_start('frontin_minify');
+ob_start('frontin_minify');
 
 
 

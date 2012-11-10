@@ -102,6 +102,11 @@ function pastry_the_thought_permalink( $category, $theThought )
     echo get_bloginfo( 'url' ) . '/' . $category->category_nicename . '/' . $theThought->post_name . '/';
 }
 
+function pastry_the_baker_thought_permalink( $name, $theThought )
+{
+    echo get_bloginfo( 'url' ) . '/' . $name . '/' . $theThought->post_name . '/';
+}
+
 function pastry_the_baker_bio( $name )
 {
     $title   = trim( $name . ' Bio' );
@@ -185,4 +190,13 @@ function frontin_minify( $input )
     
     // Done
     return $input;
+}
+
+function pastry_no_extra_bytes()
+{
+    if ( is_page( 'most-recent' ) ) {
+        return true;
+    }
+    
+    return false;
 }

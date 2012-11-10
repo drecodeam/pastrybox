@@ -24,7 +24,7 @@ It is quite easy to get ready to improve the Pastry Box Project, but it may take
 * Download and Install Wordpress. As usual.
 * In your adminCP, go to "Permalinks". Check "Custom Structure": `/%category%/%postname%/`
 * In your adminCP, go to "Permalinks". Rename Category base to "baker"
-* In your adminCP, Add __7__ new pages. They must all be __empty__ (nothing to add, just publish them with empty content). Here are the titles those 7 pages: About, Archives, Bakers, Disclaimer, Privacy Policy, Stream, Terms Of Services. 
+* In your adminCP, Add __8__ new pages. They must all be __empty__ (nothing to add, just publish them with empty content). Here are the titles those 8 pages: Most Recent, About, Archives, Bakers, Disclaimer, Privacy Policy, Stream, Terms Of Services. 
 * In your adminCP, create as many categories as you wish. Categories are named after Bakers (e.g. "Andy Clarke", "Bruce Lawson", "Emily Lewis" etc.). A list of all the guests participating in The Pastry Box Project is available at the following url: [http://the-pastry-box-project.net/bakers](http://the-pastry-box-project.net/bakers).
 * In your adminCP, start creating posts: select a category, use a title which adheres to the following format: "1 January 2012, baked by Lea Verou", add some content, publish.
 * In your adminCP, repeat previous step, but schedule the post (future post) instead of publishing it.

@@ -2,15 +2,25 @@
 <?php //require_once 'static/maintenance.php'; ?>
 <?php require_once 'parts/head.php'; ?>
 
-<body id="top"<?php if( is_front_page() ): ?> class="front"<?php endif; ?>>
+<body id="top" class="<?php if( is_front_page() ): ?>front <?php endif; ?><?php echo $pagename; ?>">
 
-<?php require_once 'parts/topnav.php'; ?>
+<?php 
+if( !pastry_no_extra_bytes() ) {
+    require_once 'parts/topnav.php'; 
+}
+?>
 <?php require_once 'parts/banner.php'; ?>
 <?php require_once 'parts/main.php'; ?>
-<?php if( is_front_page() ): ?>
-  <?php require_once 'parts/complementary.php'; ?>
-<?php endif; ?>
-<?php require_once 'parts/contentinfo.php'; ?>
+<?php 
+if( is_front_page() ) {
+    require_once 'parts/complementary.php';
+}
+?>
+<?php 
+if( !pastry_no_extra_bytes() ) {
+    require_once 'parts/contentinfo-short.php'; 
+}
+?>
 <?php require_once 'parts/footer.php'; ?>
 
 </body>
